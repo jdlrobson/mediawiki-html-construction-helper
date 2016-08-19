@@ -1,0 +1,5 @@
+{
+	"name": "mediawiki-html-construction-helper",
+	"description": "A library that provides basic utility functions to build HTML",
+	"version": "0.8.0"
+}
