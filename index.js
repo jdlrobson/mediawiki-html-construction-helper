@@ -1,4 +1,4 @@
-( function ( $, mw ) {
+( function () {
 	var htmlHelper = ( function () {
 		function escapeCallback( s ) {
 			switch ( s ) {
@@ -118,8 +118,10 @@
 	}() );
 
 	if ( typeof module === 'undefined' ) {
-		mw.html = htmlHelper;
+		if ( typeof mw !== 'undefined' ) {
+			mw.html = htmlHelper;
+		}
 	} else {
 		module.exports = htmlHelper;
 	}
-}( jQuery, mediaWiki ) );
+}() );
